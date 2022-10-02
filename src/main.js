@@ -13,16 +13,11 @@ let x = setInterval(function() {
     let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
     let seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-    document.getElementById("days").textContent = days.toString()+" Days";
-    document.getElementById("hours").textContent = hours.toString()+" Hours";
-    document.getElementById("mins").textContent = minutes.toString()+" Minutes";
-    document.getElementById("secs").textContent = seconds.toString()+" Seconds";
+    document.getElementById("days").textContent = days.toString();
+    document.getElementById("hours").textContent = hours.toString();
+    document.getElementById("mins").textContent = minutes.toString();
+    document.getElementById("secs").textContent = seconds.toString();
 
-
-    if (distance < 0) {
-        clearInterval(x);
-        document.getElementById("demo").innerHTML = "EXPIRED";
-    }
 }, 1000);
 
 let iter = false;
@@ -43,23 +38,4 @@ setInterval(
         }
     }, 1500);
 
-
-function copyTimestamp() {
-    const copyTime = document.querySelector("#copy-time");
-
-    copyTime.disabled = true;
-
-    let now = new Date().getTime();
-    let content = countDownDate-now;
-
-    navigator.clipboard.writeText(content.toString())
-    .catch(err => {
-        console.log('Error occurred when copying clipboard', err);
-    })
-
-    copyTime.textContent = "Copied to Clipboard!";
-    setTimeout(()=>{copyTime.textContent = "Copy Timestamp";}, 3000);
-    copyTime.disabled = false;
-
-}
 
