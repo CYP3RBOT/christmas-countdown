@@ -20,22 +20,3 @@ let x = setInterval(function() {
 
 }, 1000);
 
-let iter = false;
-setInterval(
-    () => {
-        if (iter) {
-            dates[0].style.color="green";
-            dates[1].style.color="red";
-            dates[2].style.color="green";
-            dates[3].style.color="red";
-            iter = false;
-        } else {
-            dates[0].style.color="red";
-            dates[1].style.color="green";
-            dates[2].style.color="red";
-            dates[3].style.color="green";
-            iter = true;
-        }
-    }, 1500);
-
-
