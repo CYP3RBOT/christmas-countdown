@@ -1,51 +1,70 @@
-html, body {
-    margin:0;
-    padding:0;
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
+
+* {
+    box-sizing: border-box;
 }
 
 body {
     background-color: #3a0808;
-}
-
-.social-container {
+    background-size: cover;
+    background-position: center center;
     display: flex;
-    justify-content: center;
-}
-
-.social {
-    padding-top: 20px;
-    width: 40px;
-    height: 40px;
-}
-
-.time-container {
+    flex-direction: column;
     align-items: center;
-    padding-top: 100px;
-}
-
-.date {
-    padding-left: 37%;
-
-    color: #4E9525;
-    font-size: 30px;
-    font-family: Bahnschrift, 'serif';
-}
-
-.date:nth-child(1) { height: 100px; margin-left: 80px;}
-.date:nth-child(2) { height: 100px; margin-left: 160px;}
-.date:nth-child(3) { height: 100px; margin-left: 240px;}
-.date:nth-child(4) { height: 100px; margin-left: 320px;}
-
-.side-button {
+    min-height: 100vh;
+    font-family: "Poppins", sans-serif;
+    margin: 0;
     padding: 20px;
-    border-radius: 10px;
-    background-color: #3a0808;
-    color: aliceblue;
-    border: dotted 1px aliceblue;
-    font-family: Bahnschrift, 'serif';
-
 }
 
-.side-button:hover {
-    background-color: darkred;
+h1 {
+    font-weight: normal;
+    font-size: 4rem;
+    margin-top: 5rem;
+    color: red;
+    margin-top: 160px;
+    text-shadow: 2px 7px 5px rgba(0,0,0,.3),
+    0px -4px 10px rgba(255,255,255,0.3);
+}
+
+h1 span {
+    color: green;
+}
+
+.container {
+    width: 800px;
+    height: 500px;
+    background-color: transparent;
+    border-radius: 20px;
+    text-align: center;
+    position: absolute;
+    z-index: -1;
+    opacity: 100%;
+    margin-top: 80px;
+}
+
+.countdown-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    color: white;
+}
+
+.big-text {
+    font-weight: bold;
+    font-size: 6rem;
+    line-height: 1;
+    margin: 1rem 2rem;
+    text-shadow: 2px 7px 5px rgba(0,0,0,.3),
+    0px -4px 10px rgba(255,255,255,0.3);
+}
+
+.countdown-el {
+    text-align: center;
+}
+
+.countdown-el span {
+    font-size: 1.3rem;
+    text-shadow: 2px 7px 5px rgba(0,0,0,.3),
+    0px -4px 10px rgba(255,255,255,0.3);
 }
